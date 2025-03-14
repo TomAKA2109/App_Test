@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Input, Button, Checkbox, Typography } from 'antd';
+import { Form, Input, Button, Checkbox, Typography, message } from 'antd';
 import { Link } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import SocialLogin from './components/SocialLogin';
@@ -54,7 +54,7 @@ const SignUp = () => {
             <Input.Password placeholder='Create password' type='password' className='form-control' />
           </Form.Item>  
 
-          <Form.Item label='Password' name='password' rules={[{required: true, message: 'Please re-enter your password'} , { validator: (_, value) => {
+          {/* <Form.Item label='Password' name='password' rules={[{required: true, message: 'Please re-enter your password'} , { validator: (_, value) => {
             if (value && value.length < 8) {
               return Promise.reject('Password must be at least 8 characters');
             } else {
@@ -62,7 +62,7 @@ const SignUp = () => {
             }
           }}]}>
             <Input.Password placeholder='Re-enter password' type='password' className='form-control' />
-          </Form.Item> 
+          </Form.Item>  */}
 
         </Form>
 

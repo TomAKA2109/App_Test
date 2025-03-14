@@ -9,7 +9,7 @@ const register = async (req: any, res: any) => {
     const {email, name, password} = body;
     try {
 
-        const user = await UserModel.findOne({ email });
+        const user = await UserModel.findOne({email});
 
         if(user) {
             throw new Error('Email already exists');
